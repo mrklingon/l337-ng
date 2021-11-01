@@ -10,7 +10,9 @@ function doInit () {
     "sagittarius",
     "auriga",
     "leo minor",
-    "capricornus"
+    "capricornus",
+    "bootes",
+    "coma berenices"
     ]
     consts = [
     [
@@ -94,7 +96,17 @@ function doInit () {
     "q2",
     "w2",
     "s2"
-    ]
+    ],
+    [
+    "a2",
+    "c2",
+    "k3",
+    "l3",
+    "h2",
+    "s8",
+    "y3"
+    ],
+    ["f3", "i3", "u3"]
     ]
     starpos = [
     "a",
