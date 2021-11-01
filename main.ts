@@ -1,15 +1,101 @@
 function doInit () {
     _const = 0
-    cnames = ["ursa minor", ""]
-    consts = [[
+    cnames = [
+    "ursa minor",
+    "taurus",
+    "orion",
+    "camelopardis",
+    "lyra",
+    "piscis austrinus",
+    "sagittarius",
+    "auriga",
+    "leo minor",
+    "capricornus"
+    ]
+    consts = [
+    [
     "d8",
     "h2",
     "m3",
-    "s2",
-    "t8",
-    "x6",
+    "q2",
+    "r8",
+    "v6",
     "w1"
-    ], ["", "", ""]]
+    ],
+    [
+    "b8",
+    "f4",
+    "m8",
+    "s2",
+    "y8"
+    ],
+    [
+    "f8",
+    "b2",
+    "e3",
+    "j2",
+    "o2",
+    "h6",
+    "m6",
+    "q6",
+    "v5",
+    "x8"
+    ],
+    [
+    "a3",
+    "l3",
+    "p3",
+    "u3",
+    "n3",
+    "t3"
+    ],
+    [
+    "c8",
+    "h2",
+    "l2",
+    "v5",
+    "r5"
+    ],
+    [
+    "k9",
+    "g2",
+    "v3",
+    "r3",
+    "o2"
+    ],
+    [
+    "x7",
+    "s5",
+    "o5",
+    "p5",
+    "k3",
+    "l2",
+    "i4"
+    ],
+    [
+    "b3",
+    "d8",
+    "o4",
+    "s2",
+    "v8",
+    "k4"
+    ],
+    [
+    "p3",
+    "l3",
+    "r2",
+    "o2",
+    "v2"
+    ],
+    [
+    "f6",
+    "h2",
+    "j2",
+    "q2",
+    "w2",
+    "s2"
+    ]
+    ]
     starpos = [
     "a",
     "b",
@@ -40,6 +126,10 @@ function doInit () {
     ]
 }
 input.onButtonPressed(Button.A, function () {
+    _const += 1
+    if (_const == consts.length) {
+        _const = 0
+    }
     shoConst(_const)
 })
 function shoConst (cindx: number) {
@@ -55,9 +145,15 @@ function shoConst (cindx: number) {
         basic.pause(100)
     }
 }
+input.onButtonPressed(Button.AB, function () {
+    _const = consts.length - 2
+})
 input.onButtonPressed(Button.B, function () {
     basic.showString("" + (cnames[_const]))
     shoConst(_const)
+})
+input.onGesture(Gesture.Shake, function () {
+    _const = randint(0, consts.length - 1)
 })
 function doStar (star: string) {
     spot = starpos.indexOf(star.substr(0, 1))
