@@ -57,6 +57,14 @@ function doInit () {
     4,
     1,
     2,
+    1,
+    1,
+    2,
+    3,
+    3,
+    2,
+    4,
+    2,
     1
     ]
     cnames = [
@@ -71,7 +79,14 @@ function doInit () {
     "leo minor",
     "capricornus",
     "bootes",
-    "coma berenices"
+    "coma berenices",
+    "Aquila",
+    "Cassiopeia",
+    "Cepheus",
+    "Delphinus",
+    "Cancer",
+    "Cygnus",
+    "Crater"
     ]
     consts = [
     [
@@ -161,7 +176,58 @@ function doInit () {
     "s8",
     "y3"
     ],
-    ["f3", "i3", "u3"]
+    ["f3", "i3", "u3"],
+    [
+    "f8",
+    "p4",
+    "h4",
+    "r3",
+    "y3"
+    ],
+    [
+    "f3",
+    "k4",
+    "l4",
+    "r5",
+    "o6"
+    ],
+    [
+    "b3",
+    "k2",
+    "h3",
+    "v3",
+    "s6",
+    "t2"
+    ],
+    [
+    "g2",
+    "h2",
+    "m2",
+    "x2"
+    ],
+    [
+    "c3",
+    "m3",
+    "q2",
+    "y4"
+    ],
+    [
+    "b6",
+    "k3",
+    "l4",
+    "h4",
+    "e3",
+    "s1",
+    "y4"
+    ],
+    [
+    "b1",
+    "k1",
+    "q3",
+    "n6",
+    "w1",
+    "t3"
+    ]
     ]
     starpos = [
     "a",
