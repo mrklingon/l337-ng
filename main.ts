@@ -1,5 +1,64 @@
+input.onPinPressed(TouchPin.P0, function () {
+    xx = 0
+    for (let yy of consts) {
+        shoConst(xx)
+        xx += 1
+    }
+})
+function shoSeason (num: number) {
+    if (num == 1) {
+        basic.showLeds(`
+            # # . . .
+            # . . # #
+            . # . # #
+            # # . # .
+            . . . # .
+            `)
+    }
+    if (num == 2) {
+        basic.showLeds(`
+            # # . . .
+            # . . . .
+            # # # . #
+            . # # . #
+            # # . # .
+            `)
+    }
+    if (num == 3) {
+        basic.showLeds(`
+            . # # # .
+            . # . . .
+            . # # # .
+            . # . . .
+            . # . . .
+            `)
+    }
+    if (num == 4) {
+        basic.showLeds(`
+            . . . . .
+            # . . . #
+            # . # . #
+            # . # . #
+            . # # # .
+            `)
+    }
+    basic.pause(500)
+}
 function doInit () {
     _const = 0
+    seasons = [
+    1,
+    4,
+    4,
+    4,
+    2,
+    3,
+    2,
+    4,
+    1,
+    2,
+    1
+    ]
     cnames = [
     "ursa minor",
     "taurus",
@@ -32,16 +91,13 @@ function doInit () {
     "y8"
     ],
     [
-    "f8",
-    "b2",
-    "e3",
-    "j2",
-    "o2",
-    "h6",
+    "q8",
     "m6",
-    "q6",
+    "f9",
+    "b3",
+    "h5",
     "v5",
-    "x8"
+    "y8"
     ],
     [
     "a3",
@@ -66,13 +122,12 @@ function doInit () {
     "o2"
     ],
     [
-    "x7",
-    "s5",
-    "o5",
-    "p5",
-    "k3",
-    "l2",
-    "i4"
+    "k6",
+    "g8",
+    "c6",
+    "i3",
+    "j3",
+    "s4"
     ],
     [
     "b3",
@@ -142,6 +197,7 @@ input.onButtonPressed(Button.A, function () {
     if (_const == consts.length) {
         _const = 0
     }
+    shoSeason(seasons[_const])
     shoConst(_const)
 })
 function shoConst (cindx: number) {
@@ -152,7 +208,7 @@ function shoConst (cindx: number) {
         . . . . .
         . . . . .
         `)
-    for (let value of consts[_const]) {
+    for (let value of consts[cindx]) {
         doStar(value)
         basic.pause(100)
     }
@@ -162,8 +218,23 @@ input.onButtonPressed(Button.AB, function () {
 })
 input.onButtonPressed(Button.B, function () {
     basic.showString("" + (cnames[_const]))
+    shoSeason(seasons[_const])
     shoConst(_const)
 })
+function splash () {
+    for (let index = 0; index < 3; index++) {
+        shoConst(randint(0, consts.length - 1))
+        basic.pause(100)
+    }
+    basic.pause(500)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+}
 input.onGesture(Gesture.Shake, function () {
     _const = randint(0, consts.length - 1)
 })
@@ -175,7 +246,10 @@ function doStar (star: string) {
 let mag = 0
 let spot = 0
 let starpos: string[] = []
-let consts: string[][] = []
 let cnames: string[] = []
+let seasons: number[] = []
 let _const = 0
+let consts: string[][] = []
+let xx = 0
 doInit()
+splash()
