@@ -70,7 +70,12 @@ function doInit () {
     1,
     0,
     0,
-    3
+    3,
+    1,
+    1,
+    3,
+    2,
+    1
     ]
     cnames = [
     "ursa minor",
@@ -96,7 +101,12 @@ function doInit () {
     "corona borealis",
     "vulpecula",
     "scutum",
-    "andromeda"
+    "andromeda",
+    "libra",
+    "virgo",
+    "aries",
+    "serpens",
+    "ursa major"
     ]
     consts = [
     [
@@ -272,6 +282,41 @@ function doInit () {
     "f5",
     "l5",
     "r3"
+    ],
+    [
+    "c4",
+    "i3",
+    "s2",
+    "v2",
+    "f1",
+    "k1"
+    ],
+    [
+    "k2",
+    "m1",
+    "p1",
+    "q1",
+    "o4",
+    "w6",
+    "c5"
+    ],
+    ["f2", "m6", "s4"],
+    [
+    "e2",
+    "i2",
+    "j2",
+    "s2",
+    "v3",
+    "p2",
+    "k2"
+    ],
+    [
+    "j5",
+    "m3",
+    "s4",
+    "o4",
+    "l4",
+    "f3"
     ]
     ]
     starpos = [
