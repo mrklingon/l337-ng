@@ -427,6 +427,19 @@ input.onButtonPressed(Button.A, function () {
     shoSeason(seasons[_const])
     shoConst(_const)
 })
+input.onGesture(Gesture.TiltLeft, function () {
+    basic.showLeds(`
+        . . # . .
+        . # . . .
+        # . # # #
+        . # . . .
+        . . # . .
+        `)
+    _const += -1
+    if (_const < 0) {
+        _const = consts.length - 1
+    }
+})
 function shoConst (cindx: number) {
     basic.showLeds(`
         . . . . .
@@ -464,6 +477,19 @@ function splash () {
 }
 input.onGesture(Gesture.Shake, function () {
     _const = randint(0, consts.length - 1)
+})
+input.onGesture(Gesture.TiltRight, function () {
+    basic.showLeds(`
+        . . # . .
+        . . . # .
+        # # # # #
+        . . . # .
+        . . # . .
+        `)
+    _const += 1
+    if (_const >= consts.length - 1) {
+        _const = 0
+    }
 })
 function doStar (star: string) {
     spot = starpos.indexOf(star.substr(0, 1))
