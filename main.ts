@@ -2,6 +2,7 @@ input.onPinPressed(TouchPin.P0, function () {
     xx = 0
     for (let yy of consts) {
         shoConst(xx)
+        
         xx += 1
     }
 })
