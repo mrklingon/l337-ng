@@ -1,4 +1,3 @@
-
 input.onPinPressed(TouchPin.P0, function () {
     xx = 0
     for (let yy of consts) {
@@ -76,7 +75,14 @@ function doInit () {
     1,
     3,
     2,
-    1
+    1,
+    4,
+    3,
+    3,
+    3,
+    2,
+    3,
+    4
     ]
     cnames = [
     "ursa minor",
@@ -107,7 +113,14 @@ function doInit () {
     "virgo",
     "aries",
     "serpens",
-    "ursa major"
+    "ursa major",
+    "canis major",
+    "cetus",
+    "lynx",
+    "pisces",
+    "hercules",
+    "aquarius",
+    "monoceros"
     ]
     consts = [
     [
@@ -318,6 +331,63 @@ function doInit () {
     "o4",
     "l4",
     "f3"
+    ],
+    [
+    "c8",
+    "j4",
+    "m2",
+    "q6",
+    "u4",
+    "w5"
+    ],
+    [
+    "a1",
+    "b1",
+    "f5",
+    "l1",
+    "r4",
+    "x1",
+    "y1"
+    ],
+    [
+    "u5",
+    "l2",
+    "m1",
+    "i1",
+    "e1",
+    "i1"
+    ],
+    [
+    "p4",
+    "t2",
+    "y4",
+    "l4",
+    "l4",
+    "h1",
+    "c1"
+    ],
+    [
+    "l5",
+    "m2",
+    "q3",
+    "r4",
+    "x2",
+    "u2"
+    ],
+    [
+    "f1",
+    "g2",
+    "q4",
+    "n6",
+    "t3"
+    ],
+    [
+    "e1",
+    "q3",
+    "h1",
+    "e1",
+    "s3",
+    "t1"
     ]
     ]
     starpos = [
