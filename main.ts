@@ -496,6 +496,13 @@ function doStar (star: string) {
     mag = parseFloat(star.substr(1, 1))
     led.plotBrightness(spot % 5, Math.trunc(spot / 5), mag * 20)
 }
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    xx = 0
+    for (let yy of consts) {
+        shoConst(xx)
+        xx += 1
+    }
+})
 let mag = 0
 let spot = 0
 let starpos: string[] = []
